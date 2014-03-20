@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Modals and Mask Example</title> 
+<meta name="description" content=".">
+<link href="bootstrap.css" rel="stylesheet"> 
+
+
+</head>
+
+
+<body>
+<div class="container">
+<h2>Образец модального окна и маски ввода</h2>
+<div id="example" class="modal hide fade in" style="display: none; ">
+            <div class="modal-header">
+              <a class="close" data-dismiss="modal">×</a>
+              <h3>Получите скидку 15%</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Для получения скидки 15% введите свой номер телефона.</h4>
+              <p>Предъявите администратору код скидки, который придёт на ваш телефон в виде SMS
+              <input name='tel2' type='tel' pattern='[0-9]{2,3}-[0-9]{2}-[0-9]{2}' placeholder="(XXX) 111-11-11"/>
+              
+<!--              <br><input id="phone" type="text" />-->
+<input id="phone" name="phone" type="text" placeholder="+7 (xxx) XXX-XXXX"/><br />
+
+			</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal">Закрыть</a>
+              <a href="#" class="btn btn-success">Получить скидку!</a>
+            </div>
+          </div>
+<p><a data-toggle="modal" href="#example" class="btn btn-primary btn-large">Получить скидку 15%</a></p>
+</div>
+
+<script src="jquery.js"></script>
+<script src="bootstrap-modal.js"></script>
+<script src="jquery.maskedinput.min.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+  jQuery(function($){
+    $("#phone").mask("(999) 999-9999");
+  });
+</script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+<!--
+<script src="bootstrap-modal.js"></script>
+<script src="jquery.maskedinput.min.js"></script>
+-->
+</body>
+</html>
+
+
+
+
+
